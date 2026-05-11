@@ -1,0 +1,115 @@
+{
+  "companyName": "湖北东峻实业集团有限公司",
+  "shortName": "东峻实业",
+  "summary": "湖北东峻实业集团有限公司是湖北省内一家综合性实业集团企业，主营汽车零部件及相关产品的研发、制造与销售。",
+  "industry": "制造业",
+  "subIndustry": "汽车零部件制造",
+  "scale": "中型企业（500-2000人规模推断）",
+  "mainBusiness": "汽车零部件研发制造、实业投资",
+  "products": [
+    { "name": "汽车零部件", "description": "汽车冲压件、焊接件等零部件产品" },
+    { "name": "机械加工件", "description": "精密机械加工产品" },
+    { "name": "模具制造", "description": "汽车模具设计与制造" }
+  ],
+  "targetCustomers": [
+    "整车制造企业",
+    "汽车零部件配套商",
+    "机械装备制造企业"
+  ],
+  "businessModel": "B2B制造供应模式，为整车厂及下游零部件企业提供配套生产服务",
+  "rating": "待评估",
+  "tags": ["汽车零部件", "制造业", "湖北企业", "实业集团", "配套供应"],
+  "website": null,
+  "slogan": null,
+  "isListed": false,
+  "stockCode": null,
+  "revenueScale": "亿元级（推断）",
+  "registration": {
+    "registeredName": "湖北东峻实业集团有限公司",
+    "registeredCapital": "待查证",
+    "paidCapital": "待查证",
+    "establishedDate": "待查证",
+    "legalRepresentative": "待查证",
+    "businessStatus": "在营/存续（推断）",
+    "shareholders": [],
+    "branchCount": null,
+    "interpretation": "作为实业集团企业，股东结构可能涉及多个自然人或关联企业，需通过工商渠道核实。",
+    "organizationType": "民营企业",
+    "keyFindings": [
+      "实业集团命名方式表明业务多元化布局",
+      "湖北汽车工业集聚区位，具备产业链协同优势",
+      "制造业属性决定对供应链管理和成本控制有刚性需求"
+    ]
+  },
+  "organization": {
+    "type": "制造业企业（事业部制推断）",
+    "decisionChain": "生产负责人/采购总监 → 分管副总 → 总经理/董事长审批",
+    "keyPersons": [
+      { "name": "待查证", "title": "董事长/总经理" },
+      { "name": "待查证", "title": "生产负责人" },
+      { "name": "待查证", "title": "采购总监" }
+    ],
+    "salesStrategy": "重点开发东风系及武汉周边整车厂客户，关注交货期与质量稳定性，方案需突出成本控制与交付保障能力。"
+  },
+  "timing": {
+    "phase": "数字化基础建设阶段",
+    "analysisBasis": [
+      "中小型制造业普遍处于从ERP向智能制造过渡阶段",
+      "汽车零部件行业竞争加剧推动企业寻求数字化降本",
+      "湖北推进制造业数字化转型政策支持"
+    ],
+    "entryStrategy": "从生产管理或供应链协同切入，展示快速见效的轻量级方案",
+    "urgency": "中等，需持续跟进企业数字化规划动态"
+  },
+  "hiring": {
+    "keySignals": []
+  },
+  "competition": {
+    "industryRank": "区域型配套企业",
+    "marketShare": "区域市场份额",
+    "mainCompetitors": [
+      "骆驼集团",
+      "三环集团",
+      "其他湖北本土汽车零部件企业"
+    ],
+    "knownClients": ["东风汽车（推断）"]
+  },
+  "riskAndPolicy": {
+    "legal": {
+      "lawsuitCount": null,
+      "executedPerson": false,
+      "dishonestPerson": false,
+      "businessAnomalies": [],
+      "equityFreeze": false
+    },
+    "policy": {
+      "isSpecializedSME": null,
+      "smeLevel": "",
+      "isHighTech": null,
+      "digitalTransformation": false,
+      "esgGreen": false
+    }
+  },
+  "painPoints": [
+    { "area": "生产管理", "description": "排产依赖人工经验，订单多时插单混乱，交期协调困难", "severity": "高" },
+    { "area": "质量管理", "description": "质检记录纸质化，追溯困难，质量问题响应慢", "severity": "高" },
+    { "area": "供应链管理", "description": "原材料采购靠电话/微信，供应商对账周期长", "severity": "中" },
+    { "area": "成本核算", "description": "生产成本算不清，产品定价缺乏数据支撑", "severity": "中" },
+    { "area": "库存管理", "description": "原材料/成品库存账实不符，呆滞料处理滞后", "severity": "中" }
+  ],
+  "opportunities": [
+    { "area": "生产执行系统", "description": "MES系统可帮助实现生产可视化、进度实时追踪，提升交付透明度", "likelihood": "高" },
+    { "area": "供应商协同", "description": "通过SRM/供应商门户实现采购协同，降低沟通成本", "likelihood": "中" },
+    { "area": "质量追溯", "description": "条码/RFID追溯系统满足整车厂质量审核要求，增强客户信任", "likelihood": "高" }
+  ],
+  "analysisPath": "B",
+  "confidence": 0.4,
+  "metadata": {
+    "createdAt": "2026-05-11T00:00:00.000Z",
+    "updatedAt": "2026-05-11T00:00:00.000Z",
+    "createdBy": "AI",
+    "version": "1.0",
+    "sources": ["企业名称推断", "行业通用知识", "制造业痛点库"],
+    "confidence": 0.4
+  }
+}
