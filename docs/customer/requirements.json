@@ -1,46 +1,39 @@
 {
   "currentVersion": "v0.1",
   "status": "draft",
-  "versions": [
-    {
-      "version": "v0.1",
-      "createdAt": "2026-05-11T00:00:00.000Z",
-      "trigger": "cold-start",
-      "inputSummary": "基于客户档案推演 + 用户明确提出AI需求",
-      "changeSummary": ["从档案推演8条需求", "聚焦AI应用场景（质检、排产、工单）"]
-    }
-  ],
+  "versions": [],
   "current": {
     "salesInput": {
       "salesPerson": "",
       "lastUpdated": "2026-05-11",
       "overallAssessment": {
-        "customerIntent": "客户明确提出AI需求，希望了解AI在汽车零部件制造中的应用",
-        "projectUrgency": "中等，需持续跟进",
-        "budgetSituation": "待确认",
-        "competitionStatus": "待了解",
+        "customerIntent": "从档案推演客户有意向进行数字化转型，解决生产管理和质量管理痛点",
+        "projectUrgency": "中等，需持续跟进企业数字化规划动态",
+        "budgetSituation": "未知，需在首次沟通中确认",
+        "competitionStatus": "可能有金蝶/用友等厂商介入",
         "winProbability": "待评估",
-        "keyObstacles": ["客户数字化基础较弱", "AI应用需有明确ROI"],
-        "confidenceLevel": "low"
+        "keyObstacles": ["决策链较长，需多层级汇报", "数字化基础薄弱，需教育市场", "预算未明确"],
+        "confidenceLevel": "低"
       },
       "keyPersons": [
         { "name": "待查证", "title": "董事长/总经理" },
         { "name": "待查证", "title": "生产负责人" },
-        { "name": "待查证", "title": "采购总监" }
+        { "name": "待查证", "title": "采购总监" },
+        { "name": "待查证", "title": "分管副总" }
       ],
       "realNeeds": {
-        "explicitNeeds": ["AI应用需求"],
-        "implicitNeeds": ["生产效率提升", "质量管控加强", "成本透明化"],
-        "suspectedNeeds": ["智能质检", "AI工单助手", "智能排产"]
+        "explicitNeeds": [],
+        "implicitNeeds": ["生产进度可视化", "质量追溯能力", "供应链协同效率提升"],
+        "suspectedNeeds": ["生产成本精细化核算", "设备OEE分析", "客户订单协同门户"]
       },
       "decisionFactors": {
-        "primaryFactor": "投资回报率",
-        "secondaryFactors": ["交付周期", "易用性", "持续服务能力"],
-        "dealBreakers": ["无法量化效果", "实施周期过长"]
+        "primaryFactor": "投资回报率和实施风险",
+        "secondaryFactors": ["系统稳定性", "易用性", "服务响应速度"],
+        "dealBreakers": ["无法满足整车厂质量审核要求", "实施周期过长影响生产"]
       },
-      "notes": "用户主动提出AI需求，是重要突破口",
-      "concerns": ["中小企业IT能力有限", "需要交付方持续支持"],
-      "suggestions": ["从快速见效场景切入", "强调轻量化转型"]
+      "notes": "",
+      "concerns": ["中型企业IT能力未知，可能缺乏专职IT支持", "需评估与现有ERP的集成难度"],
+      "suggestions": ["从单点场景快速见效切入", "突出轻量化交付和陪伴式服务"]
     },
     "sources": {
       "meetings": [],
@@ -52,14 +45,14 @@
       {
         "id": "REQ-001",
         "category": "functional",
-        "title": "智能质检系统",
-        "description": "引入AI视觉检测技术，对冲压件、焊接件表面缺陷进行自动识别，替代人工目检，降低漏检率至0.1%以下，提升质检效率50%以上",
+        "title": "生产报工与进度追踪",
+        "description": "一线工人通过移动端快速报工，班组长实时查看工单进度，支持扫码启动/完成工单，解决排产混乱、进度不透明问题",
         "priority": "must",
         "confidence": "low",
-        "source": { "type": "profile-inference", "detail": "客户痛点：质检记录纸质化、人工目检效率低、质量问题响应慢", "raw": null },
+        "source": { "type": "profile-inference", "detail": "客户档案痛点：排产依赖人工经验，订单多时插单混乱", "raw": null },
         "status": "active",
-        "module": "AI质检",
-        "relatedPainPoints": ["质量管理"],
+        "module": "生产执行",
+        "relatedPainPoints": ["生产管理：排产依赖人工经验，订单多时插单混乱，交期协调困难"],
         "firstVersion": "v0.1",
         "lastUpdated": "v0.1",
         "history": []
@@ -67,14 +60,14 @@
       {
         "id": "REQ-002",
         "category": "functional",
-        "title": "智能工单助手",
-        "description": "基于AI大模型的工艺知识问答系统，整合工艺文件、操作规程、故障处理经验，支持车间工人通过自然语言查询工单处理方法、设备故障排查指南",
+        "title": "APS高级计划排程",
+        "description": "基于订单优先级、设备产能、物料齐套等约束自动生成排产方案，支持插单模拟和交期承诺，替代人工经验排产",
         "priority": "must",
         "confidence": "low",
-        "source": { "type": "profile-inference", "detail": "用户明确提出AI需求，推演知识管理痛点", "raw": null },
+        "source": { "type": "profile-inference", "detail": "客户档案痛点：排产依赖人工经验，插单混乱", "raw": null },
         "status": "active",
-        "module": "AI知识库",
-        "relatedPainPoints": ["生产管理"],
+        "module": "生产计划",
+        "relatedPainPoints": ["生产管理：排产依赖人工经验，订单多时插单混乱，交期协调困难"],
         "firstVersion": "v0.1",
         "lastUpdated": "v0.1",
         "history": []
@@ -82,14 +75,14 @@
       {
         "id": "REQ-003",
         "category": "functional",
-        "title": "AI智能排产优化",
-        "description": "基于订单优先级、设备产能、物料齐套情况的AI排程算法，辅助生产计划员制定最优生产计划，支持快速插单重排",
-        "priority": "should",
+        "title": "质量追溯与条码管理",
+        "description": "通过条码/RFID实现来料、过程、成品全流程追溯，支持按批次/序列号快速定位质量问题源头，满足整车厂质量审核要求",
+        "priority": "must",
         "confidence": "low",
-        "source": { "type": "profile-inference", "detail": "客户痛点：排产依赖人工经验，订单多时插单混乱", "raw": null },
+        "source": { "type": "case-matching", "detail": "客户档案机会：条码/RFID追溯系统满足整车厂质量审核要求；行业痛点：质检纸质化，追溯困难", "raw": null },
         "status": "active",
-        "module": "APS",
-        "relatedPainPoints": ["生产管理"],
+        "module": "质量管理",
+        "relatedPainPoints": ["质量管理：质检记录纸质化，追溯困难，质量问题响应慢"],
         "firstVersion": "v0.1",
         "lastUpdated": "v0.1",
         "history": []
@@ -97,14 +90,14 @@
       {
         "id": "REQ-004",
         "category": "functional",
-        "title": "生产数据AI分析看板",
-        "description": "实时采集生产数据（良率、OEE、产量），通过AI识别异常模式，预测良率趋势，生成日报/周报，支撑管理决策",
+        "title": "数字化质检与SPC分析",
+        "description": "移动端录入质检数据，自动生成检验报表和SPC统计过程控制图，提前发现质量异常并预警",
         "priority": "should",
         "confidence": "low",
-        "source": { "type": "profile-inference", "detail": "客户痛点：生产成本算不清，产品定价缺乏数据支撑", "raw": null },
+        "source": { "type": "profile-inference", "detail": "客户档案痛点：质检记录纸质化，质量问题响应慢", "raw": null },
         "status": "active",
-        "module": "BI看板",
-        "relatedPainPoints": ["成本核算"],
+        "module": "质量管理",
+        "relatedPainPoints": ["质量管理：质检记录纸质化，追溯困难，质量问题响应慢"],
         "firstVersion": "v0.1",
         "lastUpdated": "v0.1",
         "history": []
@@ -112,14 +105,14 @@
       {
         "id": "REQ-005",
         "category": "functional",
-        "title": "质量追溯条码系统",
-        "description": "通过条码/RFID实现来料、生产、检验、出货全流程追溯，满足整车厂质量审核要求，支持质量问题快速定位",
+        "title": "供应商协同门户",
+        "description": "供应商自主查询订单、确认交期、上传送货单和质检报告，减少电话/微信沟通，提升对账效率",
         "priority": "should",
         "confidence": "low",
-        "source": { "type": "profile-inference", "detail": "客户痛点：质检记录纸质化追溯困难，整车厂客户对追溯有刚性要求", "raw": null },
+        "source": { "type": "profile-inference", "detail": "客户档案痛点：原材料采购靠电话/微信，供应商对账周期长", "raw": null },
         "status": "active",
-        "module": "条码追溯",
-        "relatedPainPoints": ["质量管理"],
+        "module": "供应链管理",
+        "relatedPainPoints": ["供应链管理：原材料采购靠电话/微信，供应商对账周期长"],
         "firstVersion": "v0.1",
         "lastUpdated": "v0.1",
         "history": []
@@ -127,29 +120,29 @@
       {
         "id": "REQ-006",
         "category": "functional",
-        "title": "供应商协同门户",
-        "description": "建立供应商在线协同平台，实现采购订单确认、送货预约、质量对账等在线化，减少电话/微信沟通",
-        "priority": "could",
+        "title": "WMS仓库管理系统",
+        "description": "通过扫码实现出入库实时记账，库存水位预警，呆滞料提醒，支持批次管理和先进先出",
+        "priority": "should",
         "confidence": "low",
-        "source": { "type": "profile-inference", "detail": "客户痛点：原材料采购靠电话/微信，供应商对账周期长", "raw": null },
+        "source": { "type": "profile-inference", "detail": "客户档案痛点：原材料/成品库存账实不符，呆滞料处理滞后", "raw": null },
         "status": "active",
-        "module": "SRM",
-        "relatedPainPoints": ["供应链管理"],
+        "module": "仓储管理",
+        "relatedPainPoints": ["库存管理：原材料/成品库存账实不符，呆滞料处理滞后"],
         "firstVersion": "v0.1",
         "lastUpdated": "v0.1",
         "history": []
       },
       {
         "id": "REQ-007",
-        "category": "technical",
-        "title": "设备预测性维护",
-        "description": "采集关键设备运行数据（振动、温度、电流），通过AI分析提前预警设备故障，降低突发停机时间",
+        "category": "functional",
+        "title": "生产成本精细化核算",
+        "description": "基于工单归集材料、人工、制造费用，自动计算产品成本，为报价和利润分析提供数据支撑",
         "priority": "could",
         "confidence": "low",
-        "source": { "type": "profile-inference", "detail": "客户痛点：设备故障突发、维护靠经验、OEE低", "raw": null },
+        "source": { "type": "profile-inference", "detail": "客户档案痛点：生产成本算不清，产品定价缺乏数据支撑", "raw": null },
         "status": "active",
-        "module": "设备管理",
-        "relatedPainPoints": ["生产管理"],
+        "module": "成本管理",
+        "relatedPainPoints": ["成本核算：生产成本算不清，产品定价缺乏数据支撑"],
         "firstVersion": "v0.1",
         "lastUpdated": "v0.1",
         "history": []
@@ -157,111 +150,199 @@
       {
         "id": "REQ-008",
         "category": "functional",
-        "title": "库存智能预警",
-        "description": "基于历史消耗数据和采购周期，智能计算安全库存，实现缺料预警和呆滞料预警",
+        "title": "生产看板与车间可视化",
+        "description": "电子看板实时展示工单进度、设备状态、良率等关键指标，提升车间管理透明度和协同效率",
+        "priority": "could",
+        "confidence": "low",
+        "source": { "type": "industry-pattern", "detail": "行业痛点库：生产管理-进度不透明、插单混乱，对应看板工具", "raw": null },
+        "status": "active",
+        "module": "生产执行",
+        "relatedPainPoints": ["生产管理：排产依赖人工经验，订单多时插单混乱，交期协调困难"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-009",
+        "category": "functional",
+        "title": "设备点检与OEE分析",
+        "description": "移动端点检任务推送，故障报修，工时统计，计算OEE设备综合效率，为设备维护提供数据支撑",
         "priority": "wont",
         "confidence": "low",
-        "source": { "type": "profile-inference", "detail": "客户痛点：原材料/成品库存账实不符，呆滞料处理滞后", "raw": null },
+        "source": { "type": "industry-pattern", "detail": "行业痛点库：设备管理-OEE低、故障突发，当前优先级低", "raw": null },
         "status": "active",
-        "module": "WMS",
-        "relatedPainPoints": ["库存管理"],
+        "module": "设备管理",
+        "relatedPainPoints": [],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-010",
+        "category": "functional",
+        "title": "客户订单协同门户",
+        "description": "客户（整车厂）可实时查看订单生产进度和交期状态，提升客户满意度和信任度",
+        "priority": "wont",
+        "confidence": "low",
+        "source": { "type": "industry-pattern", "detail": "行业痛点库：订单管理-交期难跟踪，当前优先级低", "raw": null },
+        "status": "active",
+        "module": "客户协同",
+        "relatedPainPoints": [],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-011",
+        "category": "integration",
+        "title": "ERP系统对接",
+        "description": "与现有ERP系统（推断用友/金蝶/定制ERP）实现基础数据同步，包括物料、客户、供应商、BOM等",
+        "priority": "must",
+        "confidence": "low",
+        "source": { "type": "profile-inference", "detail": "数字化阶段推断：需与现有ERP兼容或互补", "raw": null },
+        "status": "active",
+        "module": "系统集成",
+        "relatedPainPoints": [],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-012",
+        "category": "technical",
+        "title": "条码/RFID硬件选型与集成",
+        "description": "根据追溯精度要求（批次/序列号）选型条码或RFID硬件，提供扫码枪/PDA等设备方案",
+        "priority": "must",
+        "confidence": "low",
+        "source": { "type": "profile-inference", "detail": "质量追溯需求需要条码/RFID硬件支持", "raw": null },
+        "status": "active",
+        "module": "硬件集成",
+        "relatedPainPoints": ["质量管理：质检记录纸质化，追溯困难"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-013",
+        "category": "non-functional",
+        "title": "移动端应用支持",
+        "description": "支持Android/iOS移动端操作，报工、质检、点检等高频操作移动化",
+        "priority": "should",
+        "confidence": "low",
+        "source": { "type": "profile-inference", "detail": "车间场景需要移动端支持高频操作", "raw": null },
+        "status": "active",
+        "module": "用户体验",
+        "relatedPainPoints": ["生产管理：排产依赖人工经验"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-014",
+        "category": "non-functional",
+        "title": "云端部署与数据安全",
+        "description": "支持公有云/私有云部署，数据本地存储或加密传输，满足企业数据安全要求",
+        "priority": "could",
+        "confidence": "low",
+        "source": { "type": "industry-pattern", "detail": "中型制造企业IT能力有限，适合云端部署", "raw": null },
+        "status": "active",
+        "module": "基础设施",
+        "relatedPainPoints": [],
         "firstVersion": "v0.1",
         "lastUpdated": "v0.1",
         "history": []
       }
     ],
     "users": [
-      { "role": "生产主管", "description": "负责生产计划排定、生产进度管控、异常处理协调", "mainTasks": ["AI排产辅助决策", "生产数据实时看板", "异常预警推送"] },
-      { "role": "质量工程师", "description": "负责来料/过程/成品检验、质量问题分析、质量追溯处理", "mainTasks": ["智能质检辅助", "追溯系统操作", "SPC分析"] },
-      { "role": "车间工人", "description": "按工单执行生产、设备操作与点检、产品自检", "mainTasks": ["工单工艺指引查询", "设备故障处理指导", "扫码报工"] },
-      { "role": "管理层", "description": "负责经营决策、客户关系维护、数字化转型推动", "mainTasks": ["经营数据可视化", "质量/交付KPI看板", "AI应用成效报告"] },
-      { "role": "采购人员", "description": "负责供应商开发、采购订单下达、物料跟催、对账结算", "mainTasks": ["供应商协同操作", "采购数据分析"] }
+      { "role": "生产班组长", "description": "负责车间现场管理，核心用户", "mainTasks": ["查看工单进度", "协调插单", "管理报工"] },
+      { "role": "一线操作工", "description": "使用移动端报工，数量较多", "mainTasks": ["扫码报工", "质检录入"] },
+      { "role": "质检员", "description": "负责来料、过程、成品检验", "mainTasks": ["质检数据录入", "质量追溯查询"] },
+      { "role": "仓库管理员", "description": "负责原材料和成品出入库", "mainTasks": ["扫码入库", "库存盘点", "呆滞料处理"] },
+      { "role": "采购/供应商", "description": "外部用户，通过门户协同", "mainTasks": ["查看订单", "确认交期", "上传送货单"] }
     ],
     "scope": {
-      "inScope": ["智能质检AI视觉检测", "智能工单助手", "条码追溯系统", "生产数据看板"],
-      "outOfScope": ["完整MES系统建设", "APS高级排程", "SRM供应商管理", "WMS仓库管理", "设备预测性维护"],
-      "futureScope": ["多产线复制推广", "APS智能排产", "设备IoT改造"],
+      "inScope": ["生产报工与进度追踪", "质量追溯与条码管理", "供应商协同门户", "WMS仓库管理", "ERP系统对接"],
+      "outOfScope": ["APS高级计划排程（复杂度高，建议二期）", "设备OEE分析", "客户订单协同门户"],
+      "futureScope": ["APS高级计划排程", "成本精细化核算", "设备管理", "客户协同门户"],
       "phases": [
-        { "name": "POC验证", "duration": "1-2个月", "deliverables": ["AI质检模型验证", "智能工单Demo"] },
-        { "name": "Pilot", "duration": "2-4个月", "deliverables": ["1条产线AI质检上线", "智能工单全功能上线", "条码追溯上线"] },
-        { "name": "推广", "duration": "3-6个月", "deliverables": ["多产线复制", "ERP集成", "管理驾驶舱"] }
+        { "phase": "第一阶段", "duration": "3个月", "scope": "生产报工 + 质量追溯 + 基础报表", "goal": "快速见效，证明价值" },
+        { "phase": "第二阶段", "duration": "3个月", "scope": "供应商协同 + WMS + SPC分析", "goal": "扩大覆盖，深化应用" },
+        { "phase": "第三阶段", "duration": "6个月", "scope": "APS排程 + 成本核算 + 客户门户", "goal": "全面数字化" }
       ],
-      "priorityMatrix": []
+      "priorityMatrix": [
+        { "维度": "痛点严重度", "权重": "高", "对应需求": "REQ-001, REQ-002, REQ-003" },
+        { "维度": "客户明确需求", "权重": "中", "对应需求": "REQ-005, REQ-006" },
+        { "维度": "技术可行性", "权重": "中", "对应需求": "REQ-011, REQ-012, REQ-013" }
+      ]
     },
     "constraints": {
-      "budget": {
-        "total": "",
-        "flexibility": "未知"
-      },
-      "timeline": {
-        "expectedStart": "",
-        "expectedGoLive": ""
-      }
+      "budget": { "total": "", "flexibility": "未知" },
+      "timeline": { "expectedStart": "", "expectedGoLive": "" }
     },
     "successCriteria": {
-      "operational": ["质检效率提升≥50%", "缺陷漏检率≤0.1%", "追溯响应时间≤10秒"],
-      "business": ["知识查询自助解决率≥70%", "订单准时交付率提升≥15%", "投资回收期1-2年"]
+      "operational": ["报工数据实时准确，工单进度可视化", "质量问题可追溯，响应时间缩短", "供应商沟通效率提升，对账周期缩短"],
+      "business": ["客户满意度提升（满足整车厂审核要求）", "生产成本透明化，为定价提供数据支撑", "库存准确率提升，呆滞料减少"]
     },
     "solutionDirection": {
-      "overallApproach": "轻量化AI转型，从快速见效场景切入（质检+工单问答），小步快跑，试点验证后推广",
+      "overallApproach": "从生产报工和质量追溯切入，轻量化云部署，分阶段交付，快速见效",
       "recommendedApproach": null,
-      "technicalDirection": "云端AI能力+边缘计算质检，扫码/PDA轻量化数据采集，API优先集成",
+      "technicalDirection": "云端MES+轻量级QMS+SRM，条码/RFID硬件集成，移动端优先，与现有ERP数据打通",
       "implementationStrategy": null,
-      "nextSteps": ["现场调研确认需求", "试点产线选择", "POC验证"]
+      "nextSteps": ["预约客户首次沟通验证需求", "准备痛点诊断问卷", "准备轻量化MES+质量追溯方案PPT"]
     },
     "pendingQuestions": [
       {
         "id": "PQ-001",
-        "category": "技术",
-        "priority": "必问",
-        "stage": "deep-dive",
-        "question": "企业当前的ERP系统是什么品牌/版本？",
-        "purpose": "评估系统集成难度",
-        "expectedDirection": "可能是用友/金蝶/SAP等主流ERP",
-        "targetPerson": "IT负责人",
-        "relatedNeedIds": ["REQ-001", "REQ-005"],
-        "status": "pending",
-        "answer": null,
-        "resolvedInVersion": null
-      },
-      {
-        "id": "PQ-002",
-        "category": "技术",
-        "priority": "必问",
-        "stage": "deep-dive",
-        "question": "当前质检流程中，主要检测哪些缺陷类型？是否有历史缺陷图片数据？",
-        "purpose": "评估AI质检模型训练数据获取难度",
-        "expectedDirection": "冲压件表面划痕/凹陷/裂纹等",
-        "targetPerson": "质量工程师",
-        "relatedNeedIds": ["REQ-001"],
-        "status": "pending",
-        "answer": null,
-        "resolvedInVersion": null
-      },
-      {
-        "id": "PQ-003",
-        "category": "预算",
+        "category": "业务",
         "priority": "必问",
         "stage": "screening",
-        "question": "企业今年的数字化预算范围大概是多少？",
-        "purpose": "确定项目规模和技术选型",
-        "expectedDirection": "单模块10-30万/整体50-150万",
-        "targetPerson": "总经理/CIO",
+        "question": "目前生产排产主要依靠什么方式？遇到订单多或紧急插单时，通常怎么处理？",
+        "purpose": "验证生产管理痛点真实性，评估MES/APS需求优先级",
+        "expectedDirection": "人工Excel排产/口头协调 → 插单时需要手动调整，影响交期",
+        "targetPerson": "生产负责人",
         "relatedNeedIds": ["REQ-001", "REQ-002"],
         "status": "pending",
         "answer": null,
         "resolvedInVersion": null
       },
       {
-        "id": "PQ-004",
+        "id": "PQ-002",
         "category": "业务",
-        "priority": "选问",
-        "stage": "deep-dive",
-        "question": "试点产线/车间如何选择？哪条产线的质检量最大、质量要求最高？",
-        "purpose": "确定POC实施范围",
-        "expectedDirection": "质检量大的核心产线",
-        "targetPerson": "生产负责人",
-        "relatedNeedIds": ["REQ-001"],
+        "priority": "必问",
+        "stage": "screening",
+        "question": "整车厂客户对质量追溯有什么要求？你们目前是如何满足的？",
+        "purpose": "验证质量管理痛点，确认质量追溯是刚需还是优化项",
+        "expectedDirection": "客户要求批次追溯/全流程追溯 → 目前纸质记录难以快速查询",
+        "targetPerson": "质量负责人",
+        "relatedNeedIds": ["REQ-003", "REQ-004"],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      },
+      {
+        "id": "PQ-003",
+        "category": "技术",
+        "priority": "必问",
+        "stage": "screening",
+        "question": "你们目前是否有ERP系统？主要用哪些模块？有没有哪些环节感觉没有覆盖到？",
+        "purpose": "了解现有数字化基础，评估我方方案的切入点",
+        "expectedDirection": "有用友/金蝶ERP → 主要财务进销存，生产和质量模块薄弱",
+        "targetPerson": "IT负责人或生产负责人",
+        "relatedNeedIds": ["REQ-011"],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      },
+      {
+        "id": "PQ-004",
+        "category": "预算",
+        "priority": "必问",
+        "stage": "screening",
+        "question": "如果引入数字化系统，你们期望多久能看到效果？预算大概在什么量级？",
+        "purpose": "评估项目可行性和时间期望，对齐我方轻量化方案",
+        "expectedDirection": "期望3-6个月见效 → 预算根据效果定",
+        "targetPerson": "分管副总或总经理",
+        "relatedNeedIds": [],
         "status": "pending",
         "answer": null,
         "resolvedInVersion": null
@@ -271,11 +352,53 @@
         "category": "业务",
         "priority": "选问",
         "stage": "deep-dive",
-        "question": "工艺文件和操作规程目前是如何管理的？有无电子化存档？",
-        "purpose": "评估智能工单助手数据准备工作量",
-        "expectedDirection": "可能是纸质/Word/PDF等分散管理",
-        "targetPerson": "生产主管",
-        "relatedNeedIds": ["REQ-002"],
+        "question": "能详细描述一下一个典型订单从接单到交付的完整流程吗？哪些环节最容易出问题？",
+        "purpose": "绘制业务全流程，识别关键痛点和改进机会",
+        "expectedDirection": "接单→评审→BOM分解→采购→生产→质检→入库→发货 → 插单协调/物料齐套/质检等待",
+        "targetPerson": "生产负责人",
+        "relatedNeedIds": ["REQ-001", "REQ-002", "REQ-003"],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      },
+      {
+        "id": "PQ-006",
+        "category": "业务",
+        "priority": "选问",
+        "stage": "deep-dive",
+        "question": "质量问题发生后，你们通常如何定位原因和通知客户？需要多长时间？",
+        "purpose": "验证质量追溯系统需求的紧迫性",
+        "expectedDirection": "需要查纸质记录/询问工人 → 响应时间不确定",
+        "targetPerson": "质量负责人",
+        "relatedNeedIds": ["REQ-003", "REQ-004"],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      },
+      {
+        "id": "PQ-007",
+        "category": "业务",
+        "priority": "选问",
+        "stage": "deep-dive",
+        "question": "采购和供应商协同目前的主要痛点是什么？有没有因为信息不对称导致的缺料或质量问题？",
+        "purpose": "评估SRM供应商协同需求深度",
+        "expectedDirection": "电话微信沟通多 → 对账周期长 → 偶尔因物料问题影响生产",
+        "targetPerson": "采购总监",
+        "relatedNeedIds": ["REQ-005"],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      },
+      {
+        "id": "PQ-008",
+        "category": "决策",
+        "priority": "选问",
+        "stage": "closing",
+        "question": "这次数字化项目，除了您之外，还有哪些人会参与决策？最终决策权在谁手里？",
+        "purpose": "确认决策链和关键KP，避免后续推进受阻",
+        "expectedDirection": "生产负责人提方案 → 分管副总审批 → 总经理/董事长最终决定",
+        "targetPerson": "生产负责人或采购总监",
+        "relatedNeedIds": [],
         "status": "pending",
         "answer": null,
         "resolvedInVersion": null
@@ -283,16 +406,33 @@
     ],
     "risksAndAssumptions": {
       "risks": [
-        { "description": "AI质检模型训练需要足量缺陷样本数据，历史数据不足可能影响模型效果", "impact": "中", "mitigation": "POC阶段重点验证数据充分性" },
-        { "description": "车间工人对AI工具接受度可能不高，担心AI取代人工", "impact": "中", "mitigation": "强调AI辅助定位，选择配合的试点团队" },
-        { "description": "与现有ERP系统集成可能遇到接口不标准问题", "impact": "中", "mitigation": "优先采用独立部署方案，降低依赖" }
+        { "description": "客户数字化基础薄弱，可能缺乏专职IT支持，系统上线后运维困难", "impact": "中", "mitigation": "提供培训和服务支持，考虑托管运维模式" },
+        { "description": "决策链较长，需多层级汇报，周期不确定", "impact": "高", "mitigation": "提前识别KP，准备不同层级的汇报材料" },
+        { "description": "我方缺乏汽车零部件行业MES/QMS直接案例，客户可能存在信任顾虑", "impact": "中", "mitigation": "准备通用制造业案例，强调轻量化交付能力" }
       ],
       "assumptions": [
-        { "description": "企业愿意提供现场数据和人员配合支持AI模型训练", "impact": "高" },
-        { "description": "企业有明确的数字化转型意愿和推进力度", "impact": "高" }
+        { "description": "客户现有ERP为用友/金蝶/或其他国内主流ERP，支持数据对接", "impact": "中" },
+        { "description": "客户有基本网络和硬件基础设施（扫码枪/PDA等）", "impact": "低" },
+        { "description": "质量追溯为满足整车厂审核要求的刚需，优先级较高", "impact": "高" }
       ],
-      "dependencies": ["客户需配合现场调研和数据采集", "需与客户IT团队协作完成系统集成"]
+      "dependencies": ["现有ERP系统情况确认", "关键KP身份和决策链确认", "预算和时间节点确认"]
     },
-    "completionRate": { "overall": 20, "byCategory": { "functional": 25, "technical": 20 }, "blockers": ["所有需求均为推演(confidence=low)", "预算/时间线未知", "决策人未确认"] }
+    "completionRate": {
+      "overall": 24,
+      "byCategory": {
+        "business": 20,
+        "functional": 20,
+        "technical": 20,
+        "integration": 20,
+        "non-functional": 20
+      },
+      "blockers": [
+        "REQ-001: 生产报工与进度追踪 - confidence=low 且 priority=must",
+        "REQ-002: APS高级计划排程 - confidence=low 且 priority=must",
+        "REQ-003: 质量追溯与条码管理 - confidence=low 且 priority=must",
+        "REQ-011: ERP系统对接 - confidence=low 且 priority=must",
+        "REQ-012: 条码/RFID硬件选型与集成 - confidence=low 且 priority=must"
+      ]
+    }
   }
 }
