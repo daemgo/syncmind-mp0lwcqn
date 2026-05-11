@@ -1,0 +1,298 @@
+{
+  "currentVersion": "v0.1",
+  "status": "draft",
+  "versions": [
+    {
+      "version": "v0.1",
+      "createdAt": "2026-05-11T00:00:00.000Z",
+      "trigger": "cold-start",
+      "inputSummary": "基于客户档案推演 + 用户明确提出AI需求",
+      "changeSummary": ["从档案推演8条需求", "聚焦AI应用场景（质检、排产、工单）"]
+    }
+  ],
+  "current": {
+    "salesInput": {
+      "salesPerson": "",
+      "lastUpdated": "2026-05-11",
+      "overallAssessment": {
+        "customerIntent": "客户明确提出AI需求，希望了解AI在汽车零部件制造中的应用",
+        "projectUrgency": "中等，需持续跟进",
+        "budgetSituation": "待确认",
+        "competitionStatus": "待了解",
+        "winProbability": "待评估",
+        "keyObstacles": ["客户数字化基础较弱", "AI应用需有明确ROI"],
+        "confidenceLevel": "low"
+      },
+      "keyPersons": [
+        { "name": "待查证", "title": "董事长/总经理" },
+        { "name": "待查证", "title": "生产负责人" },
+        { "name": "待查证", "title": "采购总监" }
+      ],
+      "realNeeds": {
+        "explicitNeeds": ["AI应用需求"],
+        "implicitNeeds": ["生产效率提升", "质量管控加强", "成本透明化"],
+        "suspectedNeeds": ["智能质检", "AI工单助手", "智能排产"]
+      },
+      "decisionFactors": {
+        "primaryFactor": "投资回报率",
+        "secondaryFactors": ["交付周期", "易用性", "持续服务能力"],
+        "dealBreakers": ["无法量化效果", "实施周期过长"]
+      },
+      "notes": "用户主动提出AI需求，是重要突破口",
+      "concerns": ["中小企业IT能力有限", "需要交付方持续支持"],
+      "suggestions": ["从快速见效场景切入", "强调轻量化转型"]
+    },
+    "sources": {
+      "meetings": [],
+      "documents": [],
+      "communications": [],
+      "observations": []
+    },
+    "needs": [
+      {
+        "id": "REQ-001",
+        "category": "functional",
+        "title": "智能质检系统",
+        "description": "引入AI视觉检测技术，对冲压件、焊接件表面缺陷进行自动识别，替代人工目检，降低漏检率至0.1%以下，提升质检效率50%以上",
+        "priority": "must",
+        "confidence": "low",
+        "source": { "type": "profile-inference", "detail": "客户痛点：质检记录纸质化、人工目检效率低、质量问题响应慢", "raw": null },
+        "status": "active",
+        "module": "AI质检",
+        "relatedPainPoints": ["质量管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-002",
+        "category": "functional",
+        "title": "智能工单助手",
+        "description": "基于AI大模型的工艺知识问答系统，整合工艺文件、操作规程、故障处理经验，支持车间工人通过自然语言查询工单处理方法、设备故障排查指南",
+        "priority": "must",
+        "confidence": "low",
+        "source": { "type": "profile-inference", "detail": "用户明确提出AI需求，推演知识管理痛点", "raw": null },
+        "status": "active",
+        "module": "AI知识库",
+        "relatedPainPoints": ["生产管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-003",
+        "category": "functional",
+        "title": "AI智能排产优化",
+        "description": "基于订单优先级、设备产能、物料齐套情况的AI排程算法，辅助生产计划员制定最优生产计划，支持快速插单重排",
+        "priority": "should",
+        "confidence": "low",
+        "source": { "type": "profile-inference", "detail": "客户痛点：排产依赖人工经验，订单多时插单混乱", "raw": null },
+        "status": "active",
+        "module": "APS",
+        "relatedPainPoints": ["生产管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-004",
+        "category": "functional",
+        "title": "生产数据AI分析看板",
+        "description": "实时采集生产数据（良率、OEE、产量），通过AI识别异常模式，预测良率趋势，生成日报/周报，支撑管理决策",
+        "priority": "should",
+        "confidence": "low",
+        "source": { "type": "profile-inference", "detail": "客户痛点：生产成本算不清，产品定价缺乏数据支撑", "raw": null },
+        "status": "active",
+        "module": "BI看板",
+        "relatedPainPoints": ["成本核算"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-005",
+        "category": "functional",
+        "title": "质量追溯条码系统",
+        "description": "通过条码/RFID实现来料、生产、检验、出货全流程追溯，满足整车厂质量审核要求，支持质量问题快速定位",
+        "priority": "should",
+        "confidence": "low",
+        "source": { "type": "profile-inference", "detail": "客户痛点：质检记录纸质化追溯困难，整车厂客户对追溯有刚性要求", "raw": null },
+        "status": "active",
+        "module": "条码追溯",
+        "relatedPainPoints": ["质量管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-006",
+        "category": "functional",
+        "title": "供应商协同门户",
+        "description": "建立供应商在线协同平台，实现采购订单确认、送货预约、质量对账等在线化，减少电话/微信沟通",
+        "priority": "could",
+        "confidence": "low",
+        "source": { "type": "profile-inference", "detail": "客户痛点：原材料采购靠电话/微信，供应商对账周期长", "raw": null },
+        "status": "active",
+        "module": "SRM",
+        "relatedPainPoints": ["供应链管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-007",
+        "category": "technical",
+        "title": "设备预测性维护",
+        "description": "采集关键设备运行数据（振动、温度、电流），通过AI分析提前预警设备故障，降低突发停机时间",
+        "priority": "could",
+        "confidence": "low",
+        "source": { "type": "profile-inference", "detail": "客户痛点：设备故障突发、维护靠经验、OEE低", "raw": null },
+        "status": "active",
+        "module": "设备管理",
+        "relatedPainPoints": ["生产管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-008",
+        "category": "functional",
+        "title": "库存智能预警",
+        "description": "基于历史消耗数据和采购周期，智能计算安全库存，实现缺料预警和呆滞料预警",
+        "priority": "wont",
+        "confidence": "low",
+        "source": { "type": "profile-inference", "detail": "客户痛点：原材料/成品库存账实不符，呆滞料处理滞后", "raw": null },
+        "status": "active",
+        "module": "WMS",
+        "relatedPainPoints": ["库存管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      }
+    ],
+    "users": [
+      { "role": "生产主管", "description": "负责生产计划排定、生产进度管控、异常处理协调", "mainTasks": ["AI排产辅助决策", "生产数据实时看板", "异常预警推送"] },
+      { "role": "质量工程师", "description": "负责来料/过程/成品检验、质量问题分析、质量追溯处理", "mainTasks": ["智能质检辅助", "追溯系统操作", "SPC分析"] },
+      { "role": "车间工人", "description": "按工单执行生产、设备操作与点检、产品自检", "mainTasks": ["工单工艺指引查询", "设备故障处理指导", "扫码报工"] },
+      { "role": "管理层", "description": "负责经营决策、客户关系维护、数字化转型推动", "mainTasks": ["经营数据可视化", "质量/交付KPI看板", "AI应用成效报告"] },
+      { "role": "采购人员", "description": "负责供应商开发、采购订单下达、物料跟催、对账结算", "mainTasks": ["供应商协同操作", "采购数据分析"] }
+    ],
+    "scope": {
+      "inScope": ["智能质检AI视觉检测", "智能工单助手", "条码追溯系统", "生产数据看板"],
+      "outOfScope": ["完整MES系统建设", "APS高级排程", "SRM供应商管理", "WMS仓库管理", "设备预测性维护"],
+      "futureScope": ["多产线复制推广", "APS智能排产", "设备IoT改造"],
+      "phases": [
+        { "name": "POC验证", "duration": "1-2个月", "deliverables": ["AI质检模型验证", "智能工单Demo"] },
+        { "name": "Pilot", "duration": "2-4个月", "deliverables": ["1条产线AI质检上线", "智能工单全功能上线", "条码追溯上线"] },
+        { "name": "推广", "duration": "3-6个月", "deliverables": ["多产线复制", "ERP集成", "管理驾驶舱"] }
+      ],
+      "priorityMatrix": []
+    },
+    "constraints": {
+      "budget": {
+        "total": "",
+        "flexibility": "未知"
+      },
+      "timeline": {
+        "expectedStart": "",
+        "expectedGoLive": ""
+      }
+    },
+    "successCriteria": {
+      "operational": ["质检效率提升≥50%", "缺陷漏检率≤0.1%", "追溯响应时间≤10秒"],
+      "business": ["知识查询自助解决率≥70%", "订单准时交付率提升≥15%", "投资回收期1-2年"]
+    },
+    "solutionDirection": {
+      "overallApproach": "轻量化AI转型，从快速见效场景切入（质检+工单问答），小步快跑，试点验证后推广",
+      "recommendedApproach": null,
+      "technicalDirection": "云端AI能力+边缘计算质检，扫码/PDA轻量化数据采集，API优先集成",
+      "implementationStrategy": null,
+      "nextSteps": ["现场调研确认需求", "试点产线选择", "POC验证"]
+    },
+    "pendingQuestions": [
+      {
+        "id": "PQ-001",
+        "category": "技术",
+        "priority": "必问",
+        "stage": "deep-dive",
+        "question": "企业当前的ERP系统是什么品牌/版本？",
+        "purpose": "评估系统集成难度",
+        "expectedDirection": "可能是用友/金蝶/SAP等主流ERP",
+        "targetPerson": "IT负责人",
+        "relatedNeedIds": ["REQ-001", "REQ-005"],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      },
+      {
+        "id": "PQ-002",
+        "category": "技术",
+        "priority": "必问",
+        "stage": "deep-dive",
+        "question": "当前质检流程中，主要检测哪些缺陷类型？是否有历史缺陷图片数据？",
+        "purpose": "评估AI质检模型训练数据获取难度",
+        "expectedDirection": "冲压件表面划痕/凹陷/裂纹等",
+        "targetPerson": "质量工程师",
+        "relatedNeedIds": ["REQ-001"],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      },
+      {
+        "id": "PQ-003",
+        "category": "预算",
+        "priority": "必问",
+        "stage": "screening",
+        "question": "企业今年的数字化预算范围大概是多少？",
+        "purpose": "确定项目规模和技术选型",
+        "expectedDirection": "单模块10-30万/整体50-150万",
+        "targetPerson": "总经理/CIO",
+        "relatedNeedIds": ["REQ-001", "REQ-002"],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      },
+      {
+        "id": "PQ-004",
+        "category": "业务",
+        "priority": "选问",
+        "stage": "deep-dive",
+        "question": "试点产线/车间如何选择？哪条产线的质检量最大、质量要求最高？",
+        "purpose": "确定POC实施范围",
+        "expectedDirection": "质检量大的核心产线",
+        "targetPerson": "生产负责人",
+        "relatedNeedIds": ["REQ-001"],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      },
+      {
+        "id": "PQ-005",
+        "category": "业务",
+        "priority": "选问",
+        "stage": "deep-dive",
+        "question": "工艺文件和操作规程目前是如何管理的？有无电子化存档？",
+        "purpose": "评估智能工单助手数据准备工作量",
+        "expectedDirection": "可能是纸质/Word/PDF等分散管理",
+        "targetPerson": "生产主管",
+        "relatedNeedIds": ["REQ-002"],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      }
+    ],
+    "risksAndAssumptions": {
+      "risks": [
+        { "description": "AI质检模型训练需要足量缺陷样本数据，历史数据不足可能影响模型效果", "impact": "中", "mitigation": "POC阶段重点验证数据充分性" },
+        { "description": "车间工人对AI工具接受度可能不高，担心AI取代人工", "impact": "中", "mitigation": "强调AI辅助定位，选择配合的试点团队" },
+        { "description": "与现有ERP系统集成可能遇到接口不标准问题", "impact": "中", "mitigation": "优先采用独立部署方案，降低依赖" }
+      ],
+      "assumptions": [
+        { "description": "企业愿意提供现场数据和人员配合支持AI模型训练", "impact": "高" },
+        { "description": "企业有明确的数字化转型意愿和推进力度", "impact": "高" }
+      ],
+      "dependencies": ["客户需配合现场调研和数据采集", "需与客户IT团队协作完成系统集成"]
+    },
+    "completionRate": { "overall": 20, "byCategory": { "functional": 25, "technical": 20 }, "blockers": ["所有需求均为推演(confidence=low)", "预算/时间线未知", "决策人未确认"] }
+  }
+}
