@@ -1,5 +1,5 @@
 {
-  "currentVersion": "v0.2",
+  "currentVersion": "v0.3",
   "status": "draft",
   "versions": [
     {
@@ -15,20 +15,27 @@
       "trigger": "user-feedback",
       "inputSummary": "用户反馈：第一步想卖轻量化AI服务，原需求太深需放后面",
       "changeSummary": ["聚焦轻量化AI需求", "删除APS/WMS等深需求", "简化scope为AI切入场景"]
+    },
+    {
+      "version": "v0.3",
+      "createdAt": "2026-05-12T00:00:00.000Z",
+      "trigger": "user-direction",
+      "inputSummary": "用户指定方向：钉钉悟空及应用",
+      "changeSummary": ["以钉钉悟空为核心产品整合AI需求", "增加协同办公场景", "调整scope聚焦悟空生态"]
     }
   ],
   "current": {
     "salesInput": {
       "salesPerson": "",
-      "lastUpdated": "2026-05-11",
+      "lastUpdated": "2026-05-12",
       "overallAssessment": {
-        "customerIntent": "客户明确提出想了解轻量化AI服务，希望从AI切入数字化转型",
+        "customerIntent": "客户指定推钉钉悟空及应用，期望通过悟空AI能力+钉钉生态解决轻量化数字化需求",
         "projectUrgency": "中等，需持续跟进",
         "budgetSituation": "待确认",
-        "competitionStatus": "待了解",
+        "competitionStatus": "待了解（可能涉及其他SaaS厂商）",
         "winProbability": "待评估",
-        "keyObstacles": ["客户数字化基础较弱", "AI应用需有明确ROI"],
-        "confidenceLevel": "low"
+        "keyObstacles": ["客户数字化基础较弱", "需明确悟空+钉钉能解决哪些核心痛点"],
+        "confidenceLevel": "medium"
       },
       "keyPersons": [
         { "name": "待查证", "title": "董事长/总经理" },
@@ -45,9 +52,9 @@
         "secondaryFactors": ["交付周期", "易用性", "持续服务能力"],
         "dealBreakers": ["无法量化效果", "实施周期过长"]
       },
-      "notes": "用户主动提出AI需求，是重要突破口。强调轻量化、快速见效。",
-      "concerns": ["中小企业IT能力有限", "需要交付方持续支持"],
-      "suggestions": ["从快速见效场景切入（质检/工单问答）", "强调轻量化转型，不大拆大建"]
+      "notes": "以钉钉悟空为核心切入点，整合轻量化AI需求与协同办公场景。强调钉钉生态的即开即用、移动优先优势。",
+      "concerns": ["中小企业IT能力有限", "需要交付方持续支持", "钉钉悟空的具体功能边界需确认"],
+      "suggestions": ["以悟空AI能力包装原有需求（质检助手、工单助手）", "展示钉钉原生协同能力（审批、群通知）", "强调轻量化转型，不大拆大建"]
     },
     "sources": { "meetings": [], "documents": [], "communications": [], "observations": [] },
     "needs": [
